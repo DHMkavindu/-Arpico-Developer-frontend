@@ -1,0 +1,74 @@
+<!-- <nav class="navbar navbar-header" style="width: 100%;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Arpico</a>
+    </div>
+    <ul class="nav navbar-nav" routerLinkActive="active">
+      <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
+      <li *ngIf="authority === 'user'" class="nav-item">
+        <a class="nav-link" routerLink="user">User Board</a>
+      </li>
+      <li *ngIf="authority === 'admin'" class="nav-item">
+        <a class="nav-link" routerLink="admin">Admin Board</a>
+      </li>
+      <li *ngIf="authority === 'pm'" class="nav-item">
+        <a class="nav-link" routerLink="pm">PM Board</a>
+      </li>
+      <li *ngIf="!authority" class="nav-item">
+        <a class="nav-link" routerLink="auth/login">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+
+<header>
+  <a class="brand" href="">
+    
+  </a>
+  <div class="header-nav">
+    <nav class="menu-top">
+
+    </nav>
+  </div>
+
+  <div class="middle-nav">
+    <nav class="menu-middle">
+      <ul routerLinkActive="active">
+        <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
+        <li *ngIf="authority === 'user'" class="nav-item">
+          <a class="nav-link" routerLink="user">User Board</a>
+        </li>
+        <li *ngIf="authority === 'admin'" class="nav-item">
+          <a class="nav-link" routerLink="admin">Admin Board</a>
+        </li>
+        <li *ngIf="authority === 'pm'" class="nav-item">
+          <a class="nav-link" routerLink="pm">PM Board</a>
+        </li>
+        <li *ngIf="!authority" class="nav-item">
+          <a class="nav-link" routerLink="auth/login">Login</a>
+        </li>
+        <!-- <li *ngIf="authority === 'user'" class="nav-item" style="position: absolute;right: 5%;">
+          <a class="nav-link" (click)="logout()" routerLink="home">Logout</a>
+        </li> -->
+        <!-- <li *ngIf="authority === 'admin'" class="nav-item" style="position: absolute;right: 5%;">
+          <a class="nav-link" (click)="logout()" routerLink="home">Logout</a>
+        </li> -->
+        <!-- <li><a href="#" class="nav-link">About</a></li> -->
+      </ul>
+    </nav>
+  </div>
+  <div class="header-nav">
+    <p class="date">
+
+    </p>
+  </div>
+</header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

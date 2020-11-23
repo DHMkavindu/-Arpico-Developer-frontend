@@ -1,0 +1,128 @@
+<div *ngIf="isLoggedIn; else loggedOut">
+  <div style="margin-top: 4%;">
+    <ng-image-slider [images]="imageObject" [infinite]="false" [autoSlide]="2" [imageSize]="{width: '35%', height: 700}"
+      slideImage="1"></ng-image-slider>
+  </div>
+</div>
+
+
+
+<ng-template #loggedOut>
+  <main>
+    <article class="main-container">
+      <div class="login-wrapper">
+
+        <!-- Contenido del lado izquierdo -->
+        <section class="form-wrapper">
+
+          <!-- Header con links y botón de back -->
+          <header class="form-header">
+
+            <a href="#"><i class="fa fa-arrow-left gray"></i></a>
+            <a href="signup" class="register-link gray">Register</a>
+
+          </header>
+
+          <!-- Contenedor del formulario y sus mensajes -->
+          <div class="form-container">
+
+            <!-- Mensaje de login -->
+            <div class="form-messages">
+              <h2 style="text-align: center;">Login</h2>
+              <p>Welcome! Please, fill username and password to sign in into your account.</p>
+            </div>
+
+            <!-- Formulario -->
+            <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate class="form">
+              <input type="text" class="form-control" name="username" [(ngModel)]="form.username" #username="ngModel"
+                placeholder="Type your username" required />
+              <div *ngIf="f.submitted && username.invalid">
+                <div *ngIf="username.errors.required" style="color: red;">Username is required</div>
+              </div>
+              <input type="password" class="form-control" name="password" [(ngModel)]="form.password"
+                #password="ngModel" placeholder="Type your password" required minlength="6" />
+              <div *ngIf="f.submitted && password.invalid">
+                <div *ngIf="password.errors.required" style="color: red;">Password is required</div>
+                <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+              <a href="#" class="forgot-pass">Forgot your password?</a>
+              <button class="login-button" style="width: 100%;">Login</button>
+              <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger">
+                Login failed: {{errorMessage}}
+              </div>
+            </form>
+
+            <!-- Separador entre botón y opciones -->
+            <hr class="separator">
+
+            <!-- Otras opciones de inicio login -->
+            <div class="login-options">
+
+              <p class="login-text">You can also login with:</p>
+
+              <div class="login-icons">
+                <a href="#"><i class="fa fa-facebook-square"></i></a>
+                <a href="#"><i class="fa fa-google"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- Contenido del lado derecho -->
+        <section class="image-wrapper">
+
+          <div class="image-message">
+
+            <div class="image-hr-container">
+              <hr class="image-hr">
+            </div>
+
+            <div class="image-text">
+              <h2>Start your journey now</h2>
+              <p>Start create your job ! Login into your account now and start your journey.</p>
+            </div>
+
+          </div>
+
+        </section>
+      </div>
+    </article>
+  </main>
+
+
+  <!-- <div class="col-sm-3 col-sm-offset-8 well offset4 form-v-middle" style="top: 200px;">
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" name="username" [(ngModel)]="form.username" #username="ngModel"
+          required />
+        <div *ngIf="f.submitted && username.invalid">
+          <div *ngIf="username.errors.required" style="color: red;">Username is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" [(ngModel)]="form.password" #password="ngModel"
+          required minlength="6" />
+        <div *ngIf="f.submitted && password.invalid">
+          <div *ngIf="password.errors.required" style="color: red;">Password is required</div>
+          <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" style="width: 100;">Login</button>
+        <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger">
+          Login failed: {{errorMessage}}
+        </div>
+      </div>
+    </form>
+    <hr />
+    <p style="color: blue;">Don't have an account?</p>
+    <a href="signup" class="btn btn-success">Sign Up</a>
+  </div> -->
+
+</ng-template>

@@ -1,0 +1,526 @@
+<div *ngIf="info.token; else loggedOut">
+  <!-- 
+
+   -->
+  <!-- <p>
+    <strong>Username:</strong> {{info.username}}<br />
+    <strong>Roles:</strong> {{info.authorities}}<br />
+    <strong>Token:</strong> {{info.token}}.
+  </p> -->
+
+  <section class="col-12 col-lg-3">
+    <div class="card" style="margin-top:20%;">
+
+      <img src="../../assets/wal.jpg" alt="John" style="width:100%">
+      <h1>{{info.username}}</h1>
+      <p class="title">Arpico IT (Developer)</p>
+      <p>{{info.authorities}}</p>
+      <!-- <a href="#"><i class="fa fa-dribbble"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a> -->
+      <p><button class="btn btn-secondary" (click)="logout()">Logout</button></p>
+    </div>
+  </section>
+
+</div>
+
+<ng-template #loggedOut>
+  <section id="team" class="pb-5">
+    <div class="container">
+      <h5 class="section-title h1">OUR TEAM</h5>
+      <div class="row">
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="https://avatars3.githubusercontent.com/u/38838419?s=460&u=08085b2997838b03f224529516eb48484d5bf335&v=4"
+                        alt="card image">
+                    </p>
+                    <h4 class="card-title">Madushan Udeshika
+                      (මධුෂාන් උදේෂික)
+                    </h4>
+                    <p class="card-text">Web Developer(Associate Software Engineer)</p>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Madushan Udeshika</h4>
+                    <p class="card-text">A developer is an individual that builds and create software and applications. He or she writes, debugs and executes the source code of a software application.</p>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                      <li *ngIf="!authority" class="nav-item">
+                        <a class="nav-link" routerLink="../auth/login">Login</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="../../assets/menaka.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Menaka Perera
+                      (මේනක පෙරේරා)</h4>
+                    <p class="card-text">Developer(Senior Software Enginner)</p>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Menaka Perera</h4>
+                    <<p class="card-text">A developer is an individual that builds and create software and applications. He or she writes, debugs and executes the source code of a software application.</p>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                      <li *ngIf="!authority" class="nav-item">
+                        <a class="nav-link" routerLink="../auth/login">Login</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="../../assets/thilina.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Thilina Sampath
+                      (තිලින සම්පත්)
+                    </h4>
+                    <p class="card-text">Web Developer
+                      (Software Enginner)</p>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Thilina Sampath</h4>
+                    <p class="card-text">A developer is an individual that builds and create software and applications. He or she writes, debugs and executes the source code of a software application.</p>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                      <li *ngIf="!authority" class="nav-item">
+                        <a class="nav-link" routerLink="../auth/login">Login</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="../../assets/eranda.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Eranda Akmeemana
+                      (එරන්ද අක්මීමන)
+                    </h4>
+                    <p class="card-text">Developer(Senior Software Enginner)</p>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Eranda Akmeemana</h4>
+                    <p class="card-text">A developer is an individual that builds and create software and applications. He or she writes, debugs and executes the source code of a software application.</p>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                      <li *ngIf="!authority" class="nav-item">
+                        <a class="nav-link" routerLink="../auth/login">Login</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="../../assets/sampath.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Malinga Sampath Deshapriya
+                      (මාලිංග සම්පත් දේශප්‍රිය)
+                    </h4>
+                    <p class="card-text">Android Developer(Senior Software Engineer)</p>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Malinga Sampath</h4>
+                    <p class="card-text">A developer is an individual that builds and create software and applications. He or she writes, debugs and executes the source code of a software application.</p>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                      <li *ngIf="!authority" class="nav-item">
+                        <a class="nav-link" routerLink="../auth/login">Login</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="../../assets/gayashan.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Uditha Gayashan
+                      (උදිත ගයාෂාන්)
+                    </h4>
+                    <p class="card-text">Web Developer(Associate Software Engineer)</p>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Uditha Gayashan</h4>
+                    <p class="card-text">A developer is an individual that builds and create software and applications. He or she writes, debugs and executes the source code of a software application.</p>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                      <li *ngIf="!authority" class="nav-item">
+                        <a class="nav-link" routerLink="../auth/login">Login</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="../../assets/kanishka.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Kanishka Mallawaarachchi
+                      (කනිෂ්ක මල්ලවරාච්චි)
+                    </h4>
+                    <p class="card-text">Developer(Associate Software Engineer)</p>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Kanishka Mallawaarachchi</h4>
+                    <p class="card-text">A developer is an individual that builds and create software and applications. He or she writes, debugs and executes the source code of a software application.</p>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                      <li *ngIf="!authority" class="nav-item">
+                        <a class="nav-link" routerLink="../auth/login">Login</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="../../assets/hasantha.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Kavindu Hasantha
+                      (කවිදු හසන්ත)
+                    </h4>
+                    <p class="card-text">Android Developer(Associate Software Engineer)</p>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Kavindu Hasantha</h4>
+                    <p class="card-text">A developer is an individual that builds and create software and applications. He or she writes, debugs and executes the source code of a software application.</p>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                      <li *ngIf="!authority" class="nav-item">
+                        <a class="nav-link" routerLink="../auth/login">Login</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="../../assets/kavindu.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Kavindu Dilshan
+                      (කවිදු දිල්ෂාන්)
+                    </h4>
+                    <p class="card-text">Web Developer(Associate Software Engineer)</p>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Kavindu Dilshan</h4>
+                    <p class="card-text">A developer is an individual that builds and create software and applications. He or she writes, debugs and executes the source code of a software application.</p>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                      <li *ngIf="!authority" class="nav-item">
+                        <a class="nav-link" routerLink="../auth/login">Login</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+
+
+      </div>
+    </div>
+  </section>
+</ng-template>
